@@ -4,152 +4,120 @@ using namespace std;
 
 int main(){
     
-    // number 
+    // 2 8 10 16 
+    // 2 
 
-    // string 
-
+    // 10 
     // int 
-    // double 
-    // float 
-    // string 
+    // 10 -> 2
 
-
-    // int roma = 5;
-
-    // // roma = 5;
-
-    // // cout << roma;
-
-    // int dilnaz = 2;
-    // // 2.5 -> 2 
-
-    // cout << roma / dilnaz;
-
-    // float - double 
-
-    // double 2x -> float 
-
-    // double roma = 5;
-
-    // double dilnaz = 2;
-
-    // cout << roma / dilnaz;
-
-    // string 
-    
-    // string s = "dilnaz raamzan";
-
-
-    // cout << s;
-
-    // char a;
-
-    // string - group of char 
-
-
-    // char a = '*';
-
-    // cout << a;
-
-
-    // massive -> korobka 
-    
-    // 0 1 2 3 4 5 6 ... n;
-    
-    // 12 14 19
-
-    // int roma[3];
-
-    // roma[0] = 12;
-
-    // roma[1] = 14;
-
-    // roma[2] = 19;
-
-    // cout << roma[0] << " " << roma[1] << " " << roma[2];
-    // 1214
-
-    // cout << roma[0];
-    // cout << roma[1];
-    // cout << roma[2];
-
-    // 5
-    // 14 14 12 143 556 
-
-    // output  cout <<
-
-    // input cin >>
-
-    // int roma;
-
-    // // 5 
-
-    // // 5 + 9 = 14 
-    // cin >> roma;
-
-    // // cout << roma + 9;
-    // cout << roma << " + " << 9;
-
-    // for 
-
-    // for -> 
-    // 0 1 2 3 4 5 .. 100 
-
-    // for(int i = 0; i  <= 100; i = i + 1){
-    //     cout << i << " ";
-    // }
-
-    // 100 99 98 ... 0 
-
-    // i++ -> i = i + 1
-
-    // for(int i = 100; i > -1; i = i - 3){
-    //     cout << i << " ";
-    // }
-    // -2 -1 0 1 2 3
-    // int roma = 1;
-
-    // while(roma < 100){
-    //     // roma = 3;
-    //     cout << ++roma << " ";
-    //             // 3 
-    //             // 3 + 1
-    // }
-
-    // 1. 
-    // 2. 
-
-    // 5  size 
-    // 13 34325 4325 23 523
+    // 10 % 2 = 0
+    //     10 / 2 = 5
+    // 5 % 2 = 1
+    //     5 / 2 = 2 
+    // 2 % 2 = 0
+    //     2 / 2 = 1
+    // 1 % 2 = 1
+    //     1 / 2 = 0
+    // // vse ya ustal 
+    // 1010(2) = 10(10)
 
     // int n;
-
     // cin >> n;
 
-    // int massive[n];
-
-    // for(int i = 0; i < n; i++){
-    //     cin >> massive[i];
-    //     massive[i] = massive[i] * 2;
-    //     // new one       old version 
-    //     // int someNumber;
-    //     // cin >> someNumber;
-    //     // massive[i] = someNumber;
+    // while(n > 0){
+    //     int bit = n % 2;
+    //     cout << bit << " ";
+    //     n = n / 2;
     // }
 
-    // for(int i = 0; i < n; i++){
-    //     cout << massive[i] << " ";
+    // int a = 5;
+    // int b = 10;
+
+    // if(a < b){
+    //     cout << "a";
+    // } else {
+    //     if(a > b){
+    //         cout << 'b';
+    //     } else{
+    //         cout << 'c';
+    //     }
     // }
 
-    // int massive[5];
+    // bit and or xor not 
 
-    // massive[0] = 1;
-    // massive[1] = 2;
-    // massive[2] = 3;
-    // massive[3] = 4;
-    // massive[4] = 5;
-    // massive[5] = 6;
+    // 5 & 8 = ? 0
 
+    // 0101 = 5
+    // 1000 = 8
+    //  0 0 0 0 = 0
+    // cout << (5 ^ 8);
+    // if(!(5 > 6)){
+    //     cout << "Hello";
+    // }
+    // round ceil floor 
 
+    // double a = 12.567;
+
+    // // cout << int(a);
+    // cout << ceil(a);
+
+    // for(int i = 0; i < 10; i++){
+    //     cout << "Dilnaz" << " ";
+    // }
+
+    // for(int i = 9; i >= 0; i--){
+    //     cout << "Dilnaz" << " ";
+    // }
+
+    // int i = 9;
+
+    // while(i < 10){
+    //     // cout << "Dilnaz" << " ";
+    //     cout << "Dilnaz ";
+    //     i++;
+    // }
+
+    // while(i >= 0){
+    //     cout << "Roma ";
+    //     i--;
+    // }
+
+    // while(true){
+    //     cout << "ramazan";
+    // }
+
+    // int i = 0;
+    // do
+    // {
+    //     /* code */
+    //     cout << "Dilnaz " << endl;
+    //     i++; // 1 2
+    //     cout << i << " ";
+    // } while (i < 2);
+    // 1 2
+    // Dilnaz - 10 
+    // Malika - 10 
+    // Assadbek - 10 
+
+    // do
+    // {
+    //     /* code */
+    // } while (/* condition */); // next_permutation
+
+    // for(int i = 0; i < 10; i++){
+    //     if(i > 5){
+    //         continue; // 
+    //         // tp1 
+    //         cout << "Hello";
+    //     }
+    //     cout << i << " ";
+    //     // code 
+    // }
+    // 0 1 2 3 4 5 6 
+    // 0 1 2 3 4 5
+    // 0 1 2 3 4 
+
+    // tp2
     return 0;
 }
