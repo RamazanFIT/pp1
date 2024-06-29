@@ -13,6 +13,11 @@
         "string_view": "cpp",
         "unordered_map": "cpp",
         "unordered_set": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "bitset": "cpp",
+        "vector": "cpp",
+        "queue": "cpp",
+        "stack": "cpp",
+        "deque": "cpp"
     }
 }
