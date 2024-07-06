@@ -4,18 +4,18 @@ using namespace std;
 
 int main(){
     
-    string s;
-    cin >> s;
+    int n;
+    cin >> n;
 
-    for(int i = 0; i < s.size(); i++){
-        // 'a' - 1
-        // 'b' - 2
-        // 'b' - 'a' + 1
-        int ii = s[i] - 'a';
-
-        char b = char('a' + 26 - ii - 1);
-
-        cout << b;
+    for(int i = 1; i <= 9; i++){
+        for(int j = 0; j <= 9; j++){
+            for(int k = 0; k <= 9; k++){
+                // cout << i << " " << j << " " << k << endl;
+                if((i + j + k) == n){
+                    cout << i << j << k << endl;
+                }
+            }
+        }
     }
 
     return 0;

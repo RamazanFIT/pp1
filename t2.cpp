@@ -4,25 +4,33 @@ using namespace std;
 
 int main(){
     
-    map<pair<int, int>, int> mapa;
+    map<int, int> mapa;
 
-    int n;
-    cin >> n;
-
-    for(int i = 0; i < n; i++){
-        int x, y;
-        cin >> x >> y;
-        // pair<int, int> p;
-        // p.first = x;
-        // p.second = y;
-        // cout << mapa[p] << endl;
-        cout << mapa[make_pair(x, y)] << endl;
-
-        mapa[make_pair(x, y)]++;
-        mapa[make_pair(y, x)]++;
-
+    for(int i = 1; i <= 9; i++){
+        mapa[i] = 0;
     }
 
+    map<int, int> :: iterator it;
+
+    while (true)
+    {
+        int x;
+        cin >> x;
+
+        if(x == 0) break;
+
+        mapa[x]++;
+    }
+    
+
+    for(it = mapa.begin(); it != mapa.end(); it++){
+        int key = it->first;
+        int value = it->second;
+
+        // cout << key << " " << value << endl;
+        cout << value << " ";
+    }
+    
 
     return 0;
 }

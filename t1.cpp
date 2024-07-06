@@ -3,19 +3,24 @@
 using namespace std;
 
 int main(){
-    
-    // map set vector queue deque stack  
 
-    // pair - para 
+    int n;
+    cin >> n;
+    int l, r;
+    cin >> l >> r;
 
-    pair<int, int> p;
+    vector<int> massive(n);
 
-    // int x;
-    p.first = 1;
+    for(int i = 0; i < n; i++){
+        cin >> massive[i];
+    }
 
-    p.second = 2;
 
-    cout << p.first << " " << p.second;
+    reverse(massive.begin()+l-1, massive.begin() + r);
+
+    for(int i = 0; i < massive.size(); i++){
+        cout << massive[i] << " ";
+    }
 
     return 0;
 }
