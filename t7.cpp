@@ -3,57 +3,45 @@
 using namespace std;
 
 int main(){
-    // 4
-
-    // ...1
-    // ..2.
-    // .3..
-    // 4...
-
-    // cnt = 1
-
-    // 2
-    // 3
-    // 4
-
-
-    // 0 3 = 3
-    // 1 2 = 3
-    // 2 1 = 3
-    // 3 0 = 3
-
-    // i + j == n - 1
+    
+    vector<vector<string>> massive;
+    // vector<pair<string, pair<string, string>>> massive;
 
     int n;
     cin >> n;
+    string type;
+    cin >> type;
 
-    int massive[n][n];
+    // inc 
 
-    int cnt = 1;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            massive[i][j] = 0;
-            if(i + j == n - 1){
-                massive[i][j] = cnt;
-                cnt++;
-            }
-        }
-    }
+    // dec
 
+    // 16 45 00
+    // 08 15 20
+    // 12 30 45
+    // 03 10 55
+    // 20 05 30
 
     for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(massive[i][j] != 0){
-                cout << massive[i][j];
-            } else{
-                cout << ".";
-            }
-        }
-        cout << endl;
+        string hour, minute, seconds;
+        cin >> hour >> minute >> seconds;
+        vector<string> tmp;
+        tmp.push_back(hour);
+        tmp.push_back(minute);
+        tmp.push_back(seconds);
+        massive.push_back(tmp);
     }
 
-
-
+    if(type == "inc"){
+        sort(massive.begin(), massive.end());
+    } else{
+        sort(massive.begin(), massive.end());
+        reverse(massive.begin(), massive.end());
+    }
+    
+    for(int i = 0; i < n; i++){
+        cout << massive[i][0] << " " << massive[i][1] << " " << massive[i][2] << endl;
+    }
 
     return 0;
 }

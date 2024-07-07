@@ -7,15 +7,16 @@ int main(){
     int n;
     cin >> n;
 
-    for(int i = 1; i <= 9; i++){
-        for(int j = 0; j <= 9; j++){
-            for(int k = 0; k <= 9; k++){
-                // cout << i << " " << j << " " << k << endl;
-                if((i + j + k) == n){
-                    cout << i << j << k << endl;
-                }
-            }
-        }
+    map<int, int> mapa;
+
+    for(int i = 0; i < n; i++){
+        int a, b;
+        cin >> a >> b;
+
+        int sum = a + b;
+
+        cout << mapa[sum] << endl;
+        mapa[sum]++;
     }
 
     return 0;

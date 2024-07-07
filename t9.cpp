@@ -3,62 +3,58 @@
 using namespace std;
 
 int main(){
-    // 4
+    
+    // 1  push_back добавить в конец
+    // 2   удалить с начала
+    // 3 end 
+    // // input 
+    // 5
+    // 1 2 3 4 5
 
-    // ...1
-    // ..2.
-    // .3..
-    // 4...
-
-    // cnt = 1
-
-    // 2
+    // 1 2 
+    // 2 
     // 3
-    // 4
 
+    // // output 
+    // 2 3 4 5 2
 
-    // 0 3 = 3
-    // 1 2 = 3
-    // 2 1 = 3
-    // 3 0 = 3
+    // return 0;
+    // deque<int> dq;
 
-    // i + j == n - 1
+    // dq.push_back();
+    // dq.push_front();
+
+    // dq.pop_back();
+    // dq.pop_front();
 
     int n;
     cin >> n;
-
-    int massive[n][n];
-
-    int cnt1 = 1;
-    int cnt2 = 1;
+    deque<int> dq;
     for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            massive[i][j] = 0;
-            if(i == j){
-                massive[i][j] = cnt1;
-                cnt1++;
-            }
-            if(i + j == n - 1){
-                massive[i][j] = cnt2;
-                cnt2++;
-            }
-        }
+        int element;
+        cin >> element;
+        dq.push_back(element);
     }
 
-
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(massive[i][j] != 0){
-                cout << massive[i][j];
-            } else{
-                cout << ".";
-            }
+    while(true){
+        int operation;
+        cin >> operation;
+        if(operation == 3){
+            break;
         }
-        cout << endl;
+
+        if(operation == 2){
+            dq.pop_back();
+        } else{
+            int element;
+            cin >> element;
+            dq.push_front(element);
+        }
+    }
+    
+    while(dq.size() > 0){
+        cout << dq.front() << " ";
+        dq.pop_front();
     }
 
-
-
-
-    return 0;
 }

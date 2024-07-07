@@ -4,42 +4,30 @@ using namespace std;
 
 int main(){
     
-    map<string, string> mapa;
-
-    vector<pair<string, string>> answers;
-
     
+
+    // 5
+
+    // 1 3 7 2 0
+
+    // 4 5 6 
+
+    map<int, int> mapa;
+
     int n;
     cin >> n;
-    vector<pair<string, string>> massive(n);
+    int maximum = INT_MIN;
     for(int i = 0; i < n; i++){
-        cin >> massive[i].first >> massive[i].second;
-
-        mapa[massive[i].first] = massive[i].second;
+        int el;
+        cin >> el;
+        maximum = max(maximum, el);
+        mapa[el]++;
     }
-
-    for(int i = 0; i < n; i++){
-        string a = massive[i].first;
-        string b = massive[i].second;
-        if(mapa.find(b) != mapa.end()){
-            string c = mapa[b];
-
-            answers.push_back(make_pair(a, c));
-            mapa.erase(a);
-            mapa.erase(b);
-        } 
-    }
-
-    for(auto it : mapa){
-        answers.push_back(make_pair(it.first, it.second));
-    }
-    sort(answers.begin(), answers.end());
-
-    for(int i = 0; i < answers.size(); i++){
-        cout << answers[i].first << " " << answers[i].second << endl;
+    for(int i = 0; i <= maximum; i++){
+        if(mapa[i] == 0) {
+            cout << i << " ";
+        }
     }
 
     return 0;
 }
-
-// Aslan  HackMachine

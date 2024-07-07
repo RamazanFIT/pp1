@@ -3,57 +3,55 @@
 using namespace std;
 
 int main(){
-    // 4
+    
+        // roma dilnaz ivan beka assadbek 
+        // ramazan dilnaz roma vasya assadbek  ivan
 
-    // ...1
-    // ..2.
-    // .3..
-    // 4...
+        // beka ramazan vasya 
 
-    // cnt = 1
+        int n;
+        cin >> n;
 
-    // 2
-    // 3
-    // 4
+        vector<string> massive1(n);
+        map<string, int> mapa1;
+        for(int i = 0; i < n; i++){
+            cin >> massive1[i];
+            string name = massive1[i];
+            mapa1[name] = mapa1[name] + 1;
+        }
 
+        int m;
+        cin >> m;
 
-    // 0 3 = 3
-    // 1 2 = 3
-    // 2 1 = 3
-    // 3 0 = 3
+        vector<string> massive2(m);
+        map<string, int> mapa2;
+        for(int i = 0; i < m; i++){
+            cin >> massive2[i];
+            string name = massive2[i];
+            mapa2[name] = mapa2[name] + 1;
+        }
+        
+        vector<string> answer;
 
-    // i + j == n - 1
-
-    int n;
-    cin >> n;
-
-    int massive[n][n];
-
-    int cnt = 1;
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            massive[i][j] = 0;
-            if(i == j){
-                massive[i][j] = cnt;
-                cnt++;
+        for(int i = 0; i < n; i++){
+            string name = massive1[i];
+            if(mapa2[name] == 0) {
+                answer.push_back(name);
             }
         }
-    }
 
-
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            if(massive[i][j] != 0){
-                cout << massive[i][j];
-            } else{
-                cout << ".";
+        for(int i = 0; i < n; i++){
+            string name = massive2[i];
+            if(mapa1[name] == 0) {
+                answer.push_back(name);
             }
         }
-        cout << endl;
-    }
+        sort(answer.begin(), answer.end());
 
 
-
+        for(int i = 0; i < answer.size(); i++){
+            cout << answer[i] << " ";
+        }
 
     return 0;
 }

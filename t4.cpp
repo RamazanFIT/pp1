@@ -4,28 +4,22 @@ using namespace std;
 
 int main(){
     
-    int n;
-    cin >> n;
-    int massive[n][n];
+    map<int, int> mapa;
 
-    for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            cin >> massive[i][j];
+    int l, r;
+    cin >> l >> r;
+
+    int x;
+
+    while(cin >> x){
+        mapa[x] = mapa[x] + 1;
+    }
+
+    for(int i = l; i <= r; i++){
+        if(mapa[i] == 0){
+            cout << i << " ";
         }
     }
 
-    for(int j = 0; j < n; j++){
-        for(int i = n - 1; i >= 0; i--){
-            cout << massive[i][j] << " ";
-        }
-        cout << endl;
-    }
-    // 2 0 
-    // 1 0 
-    // 0 0 
-    
-    // 2 1
-    // 1 1 
-    // 0 1 
     return 0;
 }

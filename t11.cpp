@@ -2,34 +2,41 @@
 
 using namespace std;
 
-bool check_for_prime(int n){
-    for(int i = 2; i < n; i++){
-        if(n % i == 0) return false;
-    }
-    return true;
-}
-
-
 int main(){
     
+    map<string, double> cnt;
+    map<string, double> sum;
+
     int n;
     cin >> n;
 
-    vector<int> massive;
-
-    for(int i = 2; i <= 1000; i++){
-        if(check_for_prime(i) == true){
-            massive.push_back(i);
-        }
+    for(int  i= 0 ; i< n; i++){
+        string name;
+        cin >> name;
+        int x;
+        cin >> x;
+        sum[name] += x;
+        cnt[name] += 1;
     }
 
-    for(int i = 0; i < massive.size(); i++){
-        for(int j = 0; j < massive.size(); j++){
-            if(massive[i] + massive[j] == n){
-                cout << massive[i] << " " << massive[j];
-                return 0;
-            }
-        }
+    // map<string, double> :: iterator it;
+
+    // for(it = sum.begin(); it != sum.end(); it++){
+    //     string name = (*it).first;
+    //     double summa = it->second;
+
+    //     int count = cnt[name];
+
+    //     cout << fixed << setprecision(3) << name << " " << summa/count << endl;
+    // }
+
+    for(auto it : sum){
+        string name = it.first;
+        double summa = it.second;
+
+        int count = cnt[name];
+
+        cout << fixed << setprecision(3) << name << " " << summa/count << endl;
     }
 
     return 0;

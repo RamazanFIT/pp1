@@ -4,33 +4,49 @@ using namespace std;
 
 int main(){
     
-    map<int, int> mapa;
+    // 5
+    // 1 2 3 4 5
+    // Output:
+    // 2 4 5 3 1
 
-    for(int i = 1; i <= 9; i++){
-        mapa[i] = 0;
+    int n;
+    cin >> n;
+
+    vector<int> massive(n);
+
+    for(int i = 0; i < n; i++){
+        cin >> massive[i];
+    }
+    vector<int> even, odd;
+    for(int i = 0; i < n; i++){
+        if(massive[i] % 2 == 0){
+            // cout << massive[i] << " ";
+            even.push_back(massive[i]);
+        }
     }
 
-    map<int, int> :: iterator it;
-
-    while (true)
-    {
-        int x;
-        cin >> x;
-
-        if(x == 0) break;
-
-        mapa[x]++;
+    for(int i = n - 1; i >= 0; i--){
+        if(massive[i] % 2 != 0){
+            // cout << massive[i] << " ";
+            odd.push_back(massive[i]);
+        }
     }
-    
 
-    for(it = mapa.begin(); it != mapa.end(); it++){
-        int key = it->first;
-        int value = it->second;
+    sort(even.begin(), even.end());
+    sort(odd.begin(), odd.end());
 
-        // cout << key << " " << value << endl;
-        cout << value << " ";
+    reverse(even.begin(), even.end());
+    reverse(odd.begin(), odd.end());
+    // 2 4 8 10
+
+    // 10 8 4 2
+
+    for(int i = 0; i < even.size(); i++){
+        cout << even[i] << " ";
     }
-    
+    for(int i = 0; i < odd.size(); i++){
+        cout << odd[i] << " ";
+    }
 
     return 0;
 }

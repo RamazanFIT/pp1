@@ -4,41 +4,43 @@ using namespace std;
 
 int main(){
     
-    
-// 3
-// 7 4 1 
-// 8 5 2 
-// 9 6 3 
+    // deque<int> dq;
+
+    // dq.push_back();
+    // dq.push_front();
+
+    // dq.pop_back();
+    // dq.pop_front();
+
     int n;
     cin >> n;
-    int massive[n][n];
+    deque<int> dq;
     for(int i = 0; i < n; i++){
-        for(int j = 0; j < n; j++){
-            cin >> massive[i][j];
-        }
+        int element;
+        cin >> element;
+        dq.push_back(element);
     }
 
-    for(int roma = n - 1; roma >= 0; roma--){
-        for(int dilnaz = n - 1; dilnaz >= 0; dilnaz--){
-            cout << massive[dilnaz][roma] << " ";
+    while(true){
+        string operation;
+        cin >> operation;
+        if(operation == "end"){
+            break;
         }
-        cout << endl;
+
+        if(operation == "sell"){
+            dq.pop_back();
+        } else{
+            int element;
+            cin >> element;
+            dq.push_front(element);
+        }
     }
-// 2 2
-// 1 2
-// 0 2 
-
-// 2 1
-// 1 1 
-// 0 1
-
-// 3 2 1
-// 6 5 4
-// 9 8 7
-3 2 1 
-6 5 4 
-9 8 7 
-
+    
+    while(dq.size() > 0){
+        cout << dq.front() << " ";
+        dq.pop_front();
+    }
 
     return 0;
 }
