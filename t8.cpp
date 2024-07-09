@@ -4,33 +4,17 @@ using namespace std;
 
 int main(){
     
-    int n;
-    cin >> n;
+    int l, r;
+    cin >> l >> r;
 
-    int m;
-    cin >> m;
+    for(int i = l; i <= r; i++){
+        int m = i % 7;
 
-    // for(int i = 0; i < n; i++){
-    //     for(int j = 0; j < m; j++){
-    //         cout << "(" << i << ", " << j << ") "; 
-    //     }
-    //     cout << endl;
-    // }
+        if(m == 1 or m == 2 or m == 5) {
+            cout << i << " ";
 
-    int massive[n][m];
+        } 
 
-            //  v   h
-    
-    for(int i = 0; i < n; i++){
-        for(int j =0 ; j < m; j++){
-            massive[i][j] = i +;
-        }
-    }
-    for(int i = 0; i < n; i++){
-        for(int j =0 ; j < m; j++){
-            cout << massive[i][j] << " ";
-        }
-        cout << endl;
     }
 
     return 0;

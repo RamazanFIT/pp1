@@ -1,40 +1,28 @@
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-#include <vector>
-#include <set>
-#include <map>
-#include <string>
-#include <queue>
-#include <deque>
-
+#include <bits/stdc++.h>
 
 using namespace std;
 
 int main(){
     
-    // int x;
-    // x = 1;
-    // int y = 2;
-    // cout << x + y;
-    // int a;
-    // cin >> a;
-    // cout << a;
+    // 5 6
 
-    // double float 1.234
-    //             1.23454534
+    // 23 45 435 34 2
 
-    // double a;
-    // cin >> a;
-    // cout << a;
-    // double b = 12.56;
+    int n, k;
+    cin >> n >> k;
 
-    // cout << b;
+    int sum = 0;
+    for(int i = 0; i < n; i++){
+        int el;
+        cin >> el;
+        sum += el;
+    }
 
-    // double a = 12.123435345;
+    // | -1 | = 1
 
-    // cout << fixed << setprecision(3) <<  a;
+    // abs(-1) = 1
 
+    cout << abs(sum / n - k);
 
     return 0;
 }

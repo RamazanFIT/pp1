@@ -4,18 +4,38 @@ using namespace std;
 
 int main(){
     
-    // vector<int> massive = {1, 2, 3, 1, 2, 1};
+    int n;
+    cin >> n;
 
-    // vector<int> massive2 = massive;
+    set<string> st;
 
-    // reverse(massive2.begin(), massive2.end());
+    for(int i = 0; i < n; i++){
+        string s;
+        cin >> s;
 
-    // if(massive2 == massive){
-    //     cout << "Y";
-    // } else{
-    //     cout << "NO";
-    // }
+        bool flaga = false;
+        bool flagA = false;
+        bool flag1 = false;
 
+        for(int j = 0; j < s.size(); j++){
+            if(s[j] >= 'a' and s[j] <= 'z'){
+                flaga = true;
+            }
+            if(s[j] >= 'A' and s[j] <= 'Z'){
+                flagA = true;
+            }
+            if(s[j] >= '0' and s[j] <= '9'){
+                flag1 = true;
+            }
+        }
+        if(flaga and flagA and flag1){
+            st.insert(s);
+        }
 
+    }
+    cout << st.size() << endl;
+    for(auto it : st){
+        cout << it << " ";
+    }
     return 0;
 }

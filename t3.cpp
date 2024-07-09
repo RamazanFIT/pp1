@@ -4,16 +4,36 @@ using namespace std;
 
 int main(){
     
-    int massive[6] = {3, 1, 4, 6, 7, 1};
+    map<string, int> mapa;
 
-    // 1 1 3 4 6 7
+    int n;
+    cin >> n;
+    int maximum = INT_MIN;
+    for(int i = 0; i < n; i++){
+        string name;
+        cin >> name;
 
-    sort(massive + 0, massive + 6);
-    reverse(massive + 0, massive + 6);
+        int money;
+        cin >> money;
 
-    for(int i = 0; i < 6; i++){
-        cout << massive[i] << " ";
+        // mapa[name]+=money;
+        mapa[name] = mapa[name] + money;
+        maximum = max(maximum, mapa[name]);
     }
+
+
+    for(auto it : mapa){
+        if(it.second == maximum){
+            cout << it.first << " is lucky!" << endl;
+        } else{
+            
+            cout << it.first << " has to receive " << abs(maximum - it.second) << endl;
+
+        }
+
+
+    }
+
 
     return 0;
 }
