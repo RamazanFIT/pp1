@@ -3,43 +3,30 @@
 using namespace std;
 
 int main(){
-    
-    // deque<int> dq;
 
-    // dq.push_back();
-    // dq.push_front();
 
-    // dq.pop_back();
-    // dq.pop_front();
+    // roma@gmail.com
+
+    // 4 + pattern.size()
+
+    // pattern.size()
+
+    // 4 + pattern.size() - pattern.size() = 4 
 
     int n;
     cin >> n;
-    deque<int> dq;
+    string pattern = "@gmail.com";
+
     for(int i = 0; i < n; i++){
-        int element;
-        cin >> element;
-        dq.push_back(element);
-    }
+        string s;
+        cin >> s;
 
-    while(true){
-        string operation;
-        cin >> operation;
-        if(operation == "end"){
-            break;
+        if(s.find(pattern) != -1){
+            for(int j = 0; j < s.size() - pattern.size(); j++){
+                cout << s[j];
+            }
+            cout << endl;
         }
-
-        if(operation == "sell"){
-            dq.pop_back();
-        } else{
-            int element;
-            cin >> element;
-            dq.push_front(element);
-        }
-    }
-    
-    while(dq.size() > 0){
-        cout << dq.front() << " ";
-        dq.pop_front();
     }
 
     return 0;

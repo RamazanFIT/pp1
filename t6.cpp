@@ -4,42 +4,29 @@ using namespace std;
 
 int main(){
     
-    int n;
-    cin >> n;
+    // string s;
+    // cin >> s;
 
-    vector<vector<int>> massive;
+    // string a = s;
 
-    for(int i = 0; i < n; i++){
-        
-        vector<int> tmp;
-        int sum = 0;
-        tmp.push_back(sum);
-        for(int j = 0; j < n; j++){
-            int element;
-            cin >> element;
-            tmp.push_back(element);
-            sum = sum + element;
-        }
-        tmp[0] = sum;
-        massive.push_back(tmp);
-    }
-    // 3
-    // 4 5 6
-    // 1 2 3 
-    // 7 8 9
+    // reverse(a.begin(), a.end());
 
+    // if(a == s){
+    //     cout << "YES";
+    // } else{
+    //     cout << "NO";
+    // }
 
-    sort(massive.begin(), massive.end());
+    // kazak
 
-    for(int i = 0 ;i < n; i++){
-        // for(int j = 1; j < massive[i].size(); j++){
-        //     cout << massive[i][j] << " ";
-        // }
-        for(int j = 1; j <= n; j++){
-            cout << massive[i][j] << " ";
-        }
-        cout << endl;
-    }
+    // for(int i = 0; i < s.size(); i++){
+    //     if(s[i] != s[s.size() - 1 - i]){
+    //         cout << "NO";
+    //         return 0;
+    //     }
+    // }
+
+    // cout << "YES";
 
     return 0;
 }

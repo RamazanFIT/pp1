@@ -3,33 +3,56 @@
 using namespace std;
 
 int main(){
-    
-    // 6
-    // 1 2 3 3 4 2
-
-    // NO  
-    // NO 
-    // NO 
-    // YES 
-    // NO  
-    // YES 
-    
-    map<int, int> mapa;
+    // //  n
+    // *******
+    // *     *
+    // *     *
+    // *     *  //n
+    // *     *
+    // *     *
+    // *******
 
     int n;
     cin >> n;
 
-    for(int i = 0; i < n; i++){
-        int el;
-        cin >> el;
+    char massive[n][n];
 
-        if(mapa[el] != 0){
-            cout << "YES" << endl;
-        } else{
-            cout << "NO" << endl;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            massive[i][j] = ' ';
+            if(i == j or i + j == n - 1){
+                massive[i][j] = '*';
+            }
         }
-        mapa[el]++;
     }
 
+    for(int i = 0; i < n; i++){
+        massive[0][i] = '*';
+        massive[n - 1][i] = '*';
+    }
+
+    for(int i = 0; i < n; i++){
+        massive[i][0] = '*';
+        massive[i][n - 1] = '*';
+    }
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n; j++){
+            cout << massive[i][j];
+        }
+        cout << endl;
+    }
+
+// *****
+// ** **
+// * * *
+// ** **
+// *****
+
+// *****
+// ** **
+// * * *
+// ** **
+// *****
     return 0;
 }

@@ -1,34 +1,40 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <vector>
+#include <set>
+#include <map>
+#include <string>
+#include <queue>
+#include <deque>
+
 
 using namespace std;
 
 int main(){
     
-    // 5
-    // 1 2 3 4 5
-    // Output:
-    // 2 4 5 3 1
+    // int x;
+    // x = 1;
+    // int y = 2;
+    // cout << x + y;
+    // int a;
+    // cin >> a;
+    // cout << a;
 
-    int n;
-    cin >> n;
+    // double float 1.234
+    //             1.23454534
 
-    vector<int> massive(n);
+    // double a;
+    // cin >> a;
+    // cout << a;
+    // double b = 12.56;
 
-    for(int i = 0; i < n; i++){
-        cin >> massive[i];
-    }
-    
-    for(int i = 0; i < n; i++){
-        if(massive[i] % 2 == 0){
-            cout << massive[i] << " ";
-        }
-    }
+    // cout << b;
 
-    for(int i = n - 1; i >= 0; i--){
-        if(massive[i] % 2 != 0){
-            cout << massive[i] << " ";
-        }
-    }
+    // double a = 12.123435345;
+
+    // cout << fixed << setprecision(3) <<  a;
+
 
     return 0;
 }

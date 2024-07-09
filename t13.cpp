@@ -3,31 +3,45 @@
 using namespace std;
 
 int main(){
-    
-    
+    // //   m
+    // *******
+    // *     *
+    // *     *
+    // *     *  //n
+    // *     *
+    // *     *
+    // *******
 
-    // 5
+    int n, m;
+    cin >> n >> m;
 
-    // 1 3 7 2 0
+    char massive[n][m];
 
-    // 4 5 6 
-
-    map<int, int> mapa;
-
-    int n;
-    cin >> n;
-    int maximum = INT_MIN;
     for(int i = 0; i < n; i++){
-        int el;
-        cin >> el;
-        maximum = max(maximum, el);
-        mapa[el]++;
-    }
-    for(int i = 0; i <= maximum; i++){
-        if(mapa[i] == 0) {
-            cout << i << " ";
+        for(int j = 0; j < m; j++){
+            massive[i][j] = ' ';
         }
     }
+
+    for(int i = 0; i < m; i++){
+        massive[0][i] = '*';
+        massive[n - 1][i] = '*';
+    }
+
+    for(int i = 0; i < n; i++){
+        massive[i][0] = '*';
+        massive[i][m - 1] = '*';
+    }
+
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < m; j++){
+            cout << massive[i][j];
+        }
+        cout << endl;
+    }
+
+
+
 
     return 0;
 }

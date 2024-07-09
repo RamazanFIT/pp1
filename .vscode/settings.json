@@ -18,6 +18,9 @@
         "vector": "cpp",
         "queue": "cpp",
         "stack": "cpp",
-        "deque": "cpp"
+        "deque": "cpp",
+        "cctype": "cpp",
+        "ios": "cpp",
+        "iomanip": "cpp"
     }
 }

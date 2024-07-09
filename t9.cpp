@@ -4,57 +4,32 @@ using namespace std;
 
 int main(){
     
-    // 1  push_back добавить в конец
-    // 2   удалить с начала
-    // 3 end 
-    // // input 
-    // 5
-    // 1 2 3 4 5
+    // n n 
 
-    // 1 2 
-    // 2 
-    // 3
-
-    // // output 
-    // 2 3 4 5 2
-
-    // return 0;
-    // deque<int> dq;
-
-    // dq.push_back();
-    // dq.push_front();
-
-    // dq.pop_back();
-    // dq.pop_front();
+    // 1 1 1 1
+    // 3 3333
+    // 5 5555
 
     int n;
     cin >> n;
-    deque<int> dq;
-    for(int i = 0; i < n; i++){
-        int element;
-        cin >> element;
-        dq.push_back(element);
-    }
 
-    while(true){
-        int operation;
-        cin >> operation;
-        if(operation == 3){
-            break;
+    int massive[n][n];
+
+    int cnt = 1;
+
+    for(int i = 0; i <n ;i++){
+        for(int j = 0; j < n; j++){
+            massive[i][j] = cnt;
         }
+        cnt += 2;
+    }
 
-        if(operation == 2){
-            dq.pop_back();
-        } else{
-            int element;
-            cin >> element;
-            dq.push_front(element);
+    for(int i = 0 ; i <n ;i++){
+        for(int j = 0; j < n; j++){
+            cout << massive[i][j] << " ";
         }
-    }
-    
-    while(dq.size() > 0){
-        cout << dq.front() << " ";
-        dq.pop_front();
+        cout << endl;
     }
 
+    return 0;
 }

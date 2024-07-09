@@ -4,22 +4,98 @@ using namespace std;
 
 int main(){
     
-    map<int, int> mapa;
+    // ramazan 
 
-    int l, r;
-    cin >> l >> r;
+    // string s = "1234567";
 
-    int x;
+    // cout << s[1];
 
-    while(cin >> x){
-        mapa[x] = mapa[x] + 1;
+    // string s;
+    // // cin >> s;
+
+    // getline(cin, s);
+
+    // cout << s;
+
+    // string s = "ramazan";
+
+    // sort(s.begin(), s.end());
+    // reverse(s.begin(), s.end());
+
+    // cout << s;
+
+    // cout << s.size();
+
+    // char a = 'a'; // 97
+    // char b = 'b'; // 98
+    // char c = 'c'; // 99
+
+    // // 5
+    // int n;
+    // cin >> n;
+
+    // cout << char(97 + n - 1);
+
+    // char a = 'a';   
+    // a = toupper(a);
+    // cout << a;
+    // cout << char(toupper(a));
+
+    // char a = 'a';
+    // cout << char(tolower(a));
+
+    // 'a' = 97 
+
+    // 'A' = 65 
+
+    // cout << char('a' - 32);
+
+    // cout << char('A' + 32); 
+
+    // string s = "ramaZAN";
+
+    // for(int i = 0; i < s.size(); i++){
+        // s[i] = char(toupper(s[i]));
+    //     if(s[i] >= 'a' and s[i] <= 'z'){
+
+    //         s[i] -= 32;
+    //     }
+    // }
+
+    // cout << s;
+
+    // string s = "ramazan";
+
+    // cout << s.find("fofo");
+
+    // int a = s.find("fofo");
+
+    // cout << a;
+
+    // char a = 97;
+
+    // cout << a;
+
+    // a b 
+
+    // roma 
+
+    // romazan 
+
+    // YES 
+
+
+    string a, b;
+    cin >> a >> b;
+
+    if(b.find(a) != -1){
+        cout << "YES";
+    } else{
+        cout << "NO";
     }
 
-    for(int i = l; i <= r; i++){
-        if(mapa[i] == 0){
-            cout << i << " ";
-        }
-    }
+
+
 
     return 0;
 }

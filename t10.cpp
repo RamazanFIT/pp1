@@ -4,32 +4,36 @@ using namespace std;
 
 int main(){
     
-    vector<vector<string>> massive;
-    // vector<pair<string, pair<string, string>>> massive;
+    // n n 
 
+    // 1 2 3
+    // 4 5 6 
+    // 7 8 9
+    int n;
+    cin >> n;
 
+    int massive[n][n];
 
-    while(true){
-        string day, month, year;
-        // cin >> day >> month >> year;
-        cin >> day;
-        if(day == "0") break;
-
-        cin >> month >> year;
-        vector<string> tmp;
-        tmp.push_back(year);
-        tmp.push_back(month);
-        tmp.push_back(day);
-        massive.push_back(tmp);
+    for(int  i = 0; i <n; i++){
+        for(int j = 0; j < n; j++){
+            cin >> massive[i][j];
+        }
     }
 
-
-    sort(massive.begin(), massive.end());
-
-    
-    for(int i = 0; i < massive.size(); i++){
-        cout << massive[i][2] << " " << massive[i][1] << " " << massive[i][0] << endl;
+    for(int  i = 0; i <n; i++){
+        for(int j = 0; j < n; j++){
+            if(massive[i][j] != massive[j][i]){
+                cout << "Not perfect";
+                return 0;
+            }
+        }
     }
+    // alma jojo roma 
+
+    // alma koko lolo 
+
+    cout << "Perfect";
+
 
     return 0;
 }

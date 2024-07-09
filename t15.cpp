@@ -3,39 +3,30 @@
 using namespace std;
 
 int main(){
-    
-    // 1 2 3 4 5 
-    // 1 2
-    // 2 3 
-    // 3 4
-    // 4 5 
+//     5
 
-
-    // 5
-    // 4 3 1 4 5
-
-
-    // 4 + 3 = 7 
-    // 3 + 1 = 4
-    // 1 + 4 = 5
-    // 4 + 5 = 9
-
-    // 4 
-
-    set<int> st;
+//     1
+//    111
+//   11111
+//  1111111
+// 111111111
 
     int n;
     cin >> n;
-    vector<int> massive(n);
+
+    int cnt = 1;
+
     for(int i = 0; i < n; i++){
-        cin >> massive[i];
+        int probel = n - 1 - i;
+        for(int j = 0; j < probel; j++){
+            cout << " ";
+        }
+        for(int j = 0; j < cnt; j++){
+            cout << 1;
+        }
+        cnt += 2;
+        cout << endl;
     }
-
-    for(int i = 1; i < n; i++){
-        st.insert(massive[i] + massive[i - 1]);
-    }
-
-    cout << st.size();
 
     return 0;
 }
